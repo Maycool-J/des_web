@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="GameHub: Portal de reviews de videojuegos">
+  <meta name="keywords" content="videojuegos, reviews, gaming, consolas, pc">
+  <meta name="author" content="Equipo GameHub">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameHub - Reviews de Videojuegos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>🎮 GameHub</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#comparativa">Comparativa</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- INICIO -->
+  <section id="inicio">
+    <h2>Bienvenido a GameHub</h2>
+    <p>Descubre reseñas de videojuegos, comparaciones y comparte tus recomendaciones.</p>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <h2>Últimas Reviews</h2>
+    <div class="cards">
+      <article class="card">
+        <figure>
+          <img src="img/eldenring.jpg" alt="Elden Ring">
+          <figcaption>Elden Ring</figcaption>
+        </figure>
+        <p>Un RPG de mundo abierto con una historia inmersiva y combates desafiantes.</p>
+        <ul>
+          <li>✅ Mundo amplio y detallado</li>
+          <li>❌ Dificultad muy elevada</li>
+        </ul>
+        <p><b>Valoración:</b> ★★★★☆</p>
+      </article>
+
+      <article class="card">
+        <figure>
+          <img src="img/zelda.jpg" alt="Zelda BOTW">
+          <figcaption>The Legend of Zelda: BOTW</figcaption>
+        </figure>
+        <p>Aventura épica en un mundo abierto con gran libertad de exploración.</p>
+        <ul>
+          <li>✅ Jugabilidad innovadora</li>
+          <li>❌ Poca variedad en mazmorras</li>
+        </ul>
+        <p><b>Valoración:</b> ★★★★★</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- TABLA COMPARATIVA -->
+  <section id="comparativa">
+    <h2>Comparativa de Juegos</h2>
+    <table>
+      <tr>
+        <th>Juego</th>
+        <th>Género</th>
+        <th>Plataforma</th>
+        <th>Puntuación</th>
+      </tr>
+      <tr>
+        <td>Elden Ring</td>
+        <td>RPG</td>
+        <td>PC/PS5/Xbox</td>
+        <td>9/10</td>
+      </tr>
+      <tr>
+        <td>Zelda BOTW</td>
+        <td>Aventura</td>
+        <td>Nintendo Switch</td>
+        <td>10/10</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="email">Correo:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="mensaje">Sugerencia:</label><br>
+      <textarea id="mensaje" name="mensaje" required></textarea><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 GameHub – Proyecto académico</p>
+  </footer>
+
+  <script>
+    // Validación y alerta de datos del formulario
+    document.getElementById("contactForm").addEventListener("submit", function(event){
+      event.preventDefault();
+      let nombre = document.getElementById("nombre").value;
+      let email = document.getElementById("email").value;
+      let mensaje = document.getElementById("mensaje").value;
+      alert("Datos enviados:\nNombre: " + nombre + "\nCorreo: " + email + "\nMensaje: " + mensaje);
+    });
+  </script>
+
+</body>
+</html>
